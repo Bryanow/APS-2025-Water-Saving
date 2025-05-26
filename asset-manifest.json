@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/APS-2025-Water-Saving/static/css/main.afcd769e.css",
+    "main.js": "/APS-2025-Water-Saving/static/js/main.ccaac73f.js",
+    "index.html": "/APS-2025-Water-Saving/index.html",
+    "main.afcd769e.css.map": "/APS-2025-Water-Saving/static/css/main.afcd769e.css.map",
+    "main.ccaac73f.js.map": "/APS-2025-Water-Saving/static/js/main.ccaac73f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afcd769e.css",
+    "static/js/main.ccaac73f.js"
+  ]
+}
