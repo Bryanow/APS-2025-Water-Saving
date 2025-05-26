@@ -384,3 +384,332 @@ footer {
     bottom: 1.5rem;
   }
 }
+
+.interactive-button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.interactive-button:hover {
+  background-color: #005f8a;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.activity-container, .quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d0e0ef, #a7c4eb);
+  padding: 60px 1rem 1rem; /* Adjust padding-top for header */
+  box-sizing: border-box;
+}
+
+.activity-card, .quiz-card {
+  max-width: 900px;
+  width: 90%;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e8f1f8, #cce2f3);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #9bbadc;
+  overflow-y: auto;
+  max-height: calc(100vh - 60px - 2rem); /* Adjusted for new page padding */
+}
+
+.activity-card h2, .quiz-card h2 {
+  color: #005f8a;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.activity-card p, .quiz-card p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Interactive Activity Styles */
+.activity-drag-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px dashed #0077b6;
+  border-radius: 8px;
+  min-height: 120px;
+  align-items: center;
+  background-color: #f0f7ff;
+}
+
+.draggable-item {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  cursor: grab;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.draggable-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.activity-drop-zones {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.drop-zone {
+  flex: 1;
+  border: 2px dashed #005f8a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e6f0f7;
+}
+
+.drop-zone h3 {
+  color: #005f8a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dropped-item {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.correct-drop-waste {
+  background-color: #f8d7da; /* Reddish for waste */
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.correct-drop-save {
+  background-color: #d4edda; /* Greenish for save */
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+
+/* Quiz Styles */
+.question-section {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.question-count {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #005f8a;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.quiz-option-button {
+  background-color: #a7c4eb;
+  color: #003f5c;
+  border: 1px solid #7a9fd1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.quiz-option-button:hover:not(:disabled) {
+  background-color: #8faed9;
+  transform: translateY(-2px);
+}
+
+.quiz-option-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.quiz-option-button.correct {
+  background-color: #28a745;
+  color: white;
+  border-color: #218838;
+}
+
+.quiz-option-button.incorrect {
+  background-color: #dc3545;
+  color: white;
+  border-color: #c82333;
+}
+
+.feedback {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f0f7ff;
+  border: 1px solid #d0e0ef;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.score-section {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  color: #005f8a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.quiz-button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-button:hover {
+  background-color: #005f8a;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.quiz-button.next-button {
+  margin-top: 1rem;
+}
+
+
+/* Media Queries for Interactive Activity and Quiz */
+@media (max-width: 768px) {
+  .activity-container, .quiz-container {
+    padding-top: 80px;
+    padding-bottom: 1rem;
+  }
+  .activity-card, .quiz-card {
+    padding: 1.2rem;
+    max-height: calc(100vh - 80px - 2rem);
+  }
+  .activity-card h2, .quiz-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .activity-drag-area {
+    flex-direction: column;
+    gap: 0.8rem;
+    min-height: unset;
+  }
+  .draggable-item {
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 1rem;
+  }
+  .activity-drop-zones {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .drop-zone {
+    padding: 1rem;
+    min-height: 180px;
+  }
+  .question-text {
+    font-size: 1.3rem;
+  }
+  .quiz-option-button {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+  .feedback {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+  .score-section {
+    font-size: 1.6rem;
+  }
+  .interactive-button, .quiz-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-container, .quiz-container {
+    padding-top: 100px;
+  }
+  .activity-card, .quiz-card {
+    padding: 1rem;
+    max-height: calc(100vh - 100px - 2rem);
+  }
+  .activity-card h2, .quiz-card h2 {
+    font-size: 1.4rem;
+  }
+  .drop-zone {
+    min-height: 150px;
+  }
+  .question-text {
+    font-size: 1.2rem;
+  }
+  .quiz-option-button {
+    font-size: 0.95rem;
+  }
+  .feedback {
+    font-size: 1rem;
+  }
+  .score-section {
+    font-size: 1.4rem;
+  }
+}
