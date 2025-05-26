@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/APS-2025-Water-Saving/static/css/main.afcd769e.css",
-    "main.js": "/APS-2025-Water-Saving/static/js/main.ccaac73f.js",
+    "main.css": "/APS-2025-Water-Saving/static/css/main.97888004.css",
+    "main.js": "/APS-2025-Water-Saving/static/js/main.84494bd8.js",
     "index.html": "/APS-2025-Water-Saving/index.html",
-    "main.afcd769e.css.map": "/APS-2025-Water-Saving/static/css/main.afcd769e.css.map",
-    "main.ccaac73f.js.map": "/APS-2025-Water-Saving/static/js/main.ccaac73f.js.map"
+    "main.97888004.css.map": "/APS-2025-Water-Saving/static/css/main.97888004.css.map",
+    "main.84494bd8.js.map": "/APS-2025-Water-Saving/static/js/main.84494bd8.js.map"
   },
   "entrypoints": [
-    "static/css/main.afcd769e.css",
-    "static/js/main.ccaac73f.js"
+    "static/css/main.97888004.css",
+    "static/js/main.84494bd8.js"
   ]
 }
